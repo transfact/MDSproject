@@ -1,3 +1,8 @@
+import styled from 'styled-components';
+
+const Head = styled.h2`
+    text-align: center;
+`;
 export default function Header() {
-    return <h2>헤더입니다</h2>;
+    return <Head>승패기록장</Head>;
 }

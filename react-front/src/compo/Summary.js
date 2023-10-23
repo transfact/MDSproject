@@ -1,3 +1,8 @@
+import Tier from './summary/Tier';
 export default function Summary() {
-    return <>요약입니다</>;
+    return (
+        <div>
+            <Tier></Tier>
+        </div>
+    );
 }
