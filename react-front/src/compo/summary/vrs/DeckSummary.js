@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import ImageManager from '../../../common/ImageManger';
-import TabBtn from './decksummary/TabButton';
 
 const FlexContainer = styled.div`
     display: flex;
@@ -27,19 +26,21 @@ const DeckImg = styled.img`
 
 export default function DeckSummary() {
     return (
-        <FlexContainer>
-            {/* 실제는 props값을 참조하겠죠. */}
-            <TabBtn></TabBtn>
-            <DeckImg src={ImageManager.BlueEyes} />
-            <FlexDiv>푸른 눈</FlexDiv>
-            <FlexDiv>
-                <SmallDiv>선공횟수</SmallDiv>
-                <SmallDiv>Y회</SmallDiv>
-            </FlexDiv>
-            <FlexDiv>
-                <SmallDiv>XX승 XX패</SmallDiv>
-                <SmallDiv>승률 ??%</SmallDiv>
-            </FlexDiv>
-        </FlexContainer>
+        <>
+            <FlexContainer>
+                {/* 실제는 props값을 참조하겠죠. */}
+
+                <DeckImg src={ImageManager.BlueEyes} />
+                <FlexDiv>푸른 눈</FlexDiv>
+                <FlexDiv>
+                    <SmallDiv>선공횟수</SmallDiv>
+                    <SmallDiv>Y회</SmallDiv>
+                </FlexDiv>
+                <FlexDiv>
+                    <SmallDiv>XX승 XX패</SmallDiv>
+                    <SmallDiv>승률 ??%</SmallDiv>
+                </FlexDiv>
+            </FlexContainer>
+        </>
     );
 }

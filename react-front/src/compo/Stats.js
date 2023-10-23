@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const FlexDiv = styled.div`
-    flex: 2;
+    flex: 4;
 `;
 
 export default function Stats() {
