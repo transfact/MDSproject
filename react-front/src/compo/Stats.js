@@ -1,3 +1,9 @@
+import styled from 'styled-components';
+
+const FlexDiv = styled.div`
+    flex: 2;
+`;
+
 export default function Stats() {
-    return <div>스탯입니다</div>;
+    return <FlexDiv>스탯입니다</FlexDiv>;
 }
