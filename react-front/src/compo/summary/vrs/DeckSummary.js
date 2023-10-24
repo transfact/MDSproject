@@ -19,6 +19,7 @@ const SmallDiv = styled.div`
     line-height: 16pt;
 `;
 const DeckImg = styled.img`
+    margin: auto;
     border-radius: 50%;
     width: 35px;
     height: 35px;
@@ -31,7 +32,7 @@ export default function DeckSummary() {
                 {/* 실제는 props값을 참조하겠죠. */}
 
                 <DeckImg src={ImageManager.BlueEyes} />
-                <FlexDiv>푸른 눈</FlexDiv>
+                <FlexDiv>백룡</FlexDiv>
                 <FlexDiv>
                     <SmallDiv>선공횟수</SmallDiv>
                     <SmallDiv>Y회</SmallDiv>

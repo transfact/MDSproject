@@ -5,7 +5,6 @@ import VictoryRateSummary from './summary/VictoryRateSummary';
 
 const FlexDiv = styled.div`
     flex: 1;
-    background-color: #f7f7f9;
 `;
 
 export default function Summary() {
