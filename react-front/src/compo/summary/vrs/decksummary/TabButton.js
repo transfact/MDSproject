@@ -2,6 +2,8 @@ import styled from 'styled-components';
 
 const TabBtn = styled.button`
     background-color: white;
+    height: 30px;
+    line-height: 30px;
     flex: 1;
     border: none;
 `;

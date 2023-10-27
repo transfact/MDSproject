@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'NPSfont';
+    font-weight: normal;
+    src: url('./common/fonts/NPSfont_regular.ttf') format('truetype');
+}
+
+* {
+    font-family: 'NPSfont';
+}

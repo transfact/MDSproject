@@ -1,7 +1,7 @@
 import { PieChart } from 'react-minimal-pie-chart';
 
-export default function ImageManager(props) {
-    const { width, height } = props.size;
+export default function GraphManager(props) {
+    const { width, height, flex } = props.size;
     switch (props.graph) {
         //파이 그래프
         case 0:

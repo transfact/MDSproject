@@ -12,10 +12,11 @@ const FlexContainer = styled.div`
 `;
 
 const MoreBtn = styled.button`
-    padding: 0;
-    background-color: #f7f7f9;
+    background-color: white;
     border: none;
-    width: 100%;
+    margin: 0 10px;
+    flex: 1;
+    height: 30px;
 `;
 export default function VictoryRateSummary() {
     const [season, setSeason] = useState(0);
@@ -25,7 +26,7 @@ export default function VictoryRateSummary() {
         navigate('/details');
     };
     return (
-        <div>
+        <div style={{ display: 'flex', flexDirection: 'column' }}>
             <FlexContainer>
                 <TabBtn></TabBtn>
             </FlexContainer>
