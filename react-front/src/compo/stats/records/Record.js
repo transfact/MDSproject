@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import ImageManager from '../../../common/ImageManger';
 
 const RecordWrapper = styled.div`
-    margin: 5px;
+    margin: 1px 5px;
     padding: 2.5px;
     display: flex;
     border-bottom: 1px solid #ccc;

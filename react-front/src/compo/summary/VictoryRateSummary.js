@@ -10,9 +10,18 @@ const FlexContainer = styled.div`
     background-color: #f7f7f9;
     border-bottom: 1px #f7f7f9 solid;
 `;
-
+// const MoreBtn = styled.button`
+//     background-color: white;
+//     border: none;
+//     margin: 0 10px;
+//     padding: 10px;
+//     flex: 1;
+//     height: 30px;
+//     border-top: 1px solid #f7f7f9;
+// `;
 const MoreBtn = styled.button`
     background-color: white;
+    padding: 10px;
     border: none;
     margin: 0 10px;
     flex: 1;
