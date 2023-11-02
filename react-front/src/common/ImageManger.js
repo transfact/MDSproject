@@ -6,7 +6,7 @@ import GoldImg from '../imgs/gold.png';
 import SliverImg from '../imgs/sliver.png';
 import BronzeImg from '../imgs/bronze.png';
 import RookieImg from '../imgs/rookie.png';
-
+import DefaultFrame from '../imgs/frames/defaultFrame.png';
 const TierImg = {
     MasterImg,
     DiamondImg,
@@ -17,6 +17,9 @@ const TierImg = {
     RookieImg,
 };
 
-const ImageManager = { BlueEyes: BlueEyes, TierImg };
+const FrameImg = {
+    DefaultFrame,
+};
+const ImageManager = { BlueEyes: BlueEyes, TierImg, FrameImg };
 
 export default ImageManager;
