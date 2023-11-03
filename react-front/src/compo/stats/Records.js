@@ -4,6 +4,7 @@ import Deck from '../../common/Decks';
 import React, { useState, useEffect } from 'react';
 import Papa from 'papaparse';
 import { useNavigate, useLocation } from 'react-router-dom';
+import ImageManager from '../../common/ImageManger';
 const FlexContainer = styled.div`
     display: flex;
     flex: auto;
@@ -37,7 +38,7 @@ export default function Records() {
 
     useEffect(() => {
         readCSVFile('recordTest.csv');
-    }, [data]);
+    }, []);
 
     const readCSVFile = (csvFilePath) => {
         Papa.parse(csvFilePath, {
@@ -51,19 +52,46 @@ export default function Records() {
     };
 
     const tmp = data.map((row) => {
-        const { No, 코인토스, 선후공, 전적, 점수, 사용덱, 상대덱, 날짜, 턴 } = row;
+        const { No, 코인토스, 선후공, 전적, 티어, 사용덱, 상대덱, 날짜, 턴, 점수 } = row;
         const victory = 전적 === '승' ? 1 : 0;
         const coin = 코인토스 === '앞면' ? 1 : 0;
         const first = 선후공 === '선공' ? 1 : 0;
-        const tier = 점수;
+        const tier = 티어;
+        const score = 점수;
         const myDeck = 사용덱;
         const oppoDeck = 상대덱;
         const turn = 턴;
         const date = 날짜;
-        return { victory, turn, myDeck, tier, oppoDeck, coin, first, No, date };
+        let tierSrc;
+        switch (tier[0]) {
+            case 'r':
+                tierSrc = ImageManager.TierImg.RookieImg;
+                break;
+            case 'b':
+                tierSrc = ImageManager.TierImg.BronzeImg;
+                break;
+            case 's':
+                tierSrc = ImageManager.TierImg.SliverImg;
+                break;
+            case 'g':
+                tierSrc = ImageManager.TierImg.GoldImg;
+                break;
+            case 'p':
+                tierSrc = ImageManager.TierImg.PlatinumImg;
+                break;
+            case 'd':
+                tierSrc = ImageManager.TierImg.DiamondImg;
+                break;
+            case 'm':
+                tierSrc = ImageManager.TierImg.MasterImg;
+                break;
+            default:
+                tierSrc = ImageManager.TierImg.RookieImg;
+                break;
+        }
+        const imgSrc = Deck;
+        return { victory, turn, myDeck, tierSrc, oppoDeck, coin, first, No, date };
     });
-    console.log(tmp);
-
     return (
         <FlexDiv>
             <FlexContainer>

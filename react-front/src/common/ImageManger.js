@@ -7,6 +7,8 @@ import SliverImg from '../imgs/sliver.png';
 import BronzeImg from '../imgs/bronze.png';
 import RookieImg from '../imgs/rookie.png';
 import DefaultFrame from '../imgs/frames/defaultFrame.png';
+import PendulmnMagician from '../imgs/decks/pendulm_magician.jpg';
+
 const TierImg = {
     MasterImg,
     DiamondImg,
@@ -20,6 +22,6 @@ const TierImg = {
 const FrameImg = {
     DefaultFrame,
 };
-const ImageManager = { BlueEyes: BlueEyes, TierImg, FrameImg };
+const ImageManager = { BlueEyes: BlueEyes, PendulmnMagician, TierImg, FrameImg };
 
 export default ImageManager;

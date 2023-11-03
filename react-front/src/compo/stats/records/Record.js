@@ -8,22 +8,12 @@ const RecordWrapper = styled.div`
     background-color: ${(props) => (props.$victory == 1 ? '#B3CDFF' : '#FFD1A9')};
 `;
 
-const FrameBox = styled.div`
-    width: 35px;
-    height: 35px;
-    position: relative;
-`;
-const FrameImg = styled.img`
-    position: absolute;
-    width: 35px;
-    height: 35px;
-    z-index: 99;
-    overflow: hidden;
-`;
 const ImgBox = styled.img`
-    width: 35px;
-    height: 35px;
-    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); // 육각형 모양
+    width: 30px;
+    height: 30px;
+    margin: 2.5px;
+    border-radius: 5px;
+    /* clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); // 육각형 모양 */
 `;
 
 const RecordDiv = styled.div`
@@ -34,23 +24,20 @@ export default function Record({ record }) {
     return (
         <>
             <RecordWrapper $victory={record.victory}>
-                <ImgBox src={ImageManager.TierImg.DiamondImg} />
-                <FrameBox>
-                    <FrameImg src={ImageManager.FrameImg.DefaultFrame} />
-                    <ImgBox src={ImageManager.BlueEyes} />
-                </FrameBox>
+                <ImgBox src={ImageManager.PendulmnMagician} />
+
                 <RecordDiv style={{ flex: 2 }}>
                     {record.myDeck} {record.coin == 1 ? <span>선</span> : null}
                 </RecordDiv>
-                <FrameBox>
-                    <FrameImg src={ImageManager.FrameImg.DefaultFrame} />
-                    <ImgBox src={ImageManager.BlueEyes} />
-                </FrameBox>
+
+                <ImgBox src={ImageManager.PendulmnMagician} />
+
                 <RecordDiv style={{ flex: 2 }}>
                     {record.oppoDeck} {record.coin == 0 ? <span>선</span> : null}
                 </RecordDiv>
                 {record.victory == 1 ? <RecordDiv style={{ flex: 1 }}>승리</RecordDiv> : <RecordDiv style={{ flex: 1 }}>패배</RecordDiv>}
                 <RecordDiv style={{ flex: 1 }}>턴: {record.turn}</RecordDiv>
+                <ImgBox src={record.tierSrc} />
             </RecordWrapper>
         </>
     );
